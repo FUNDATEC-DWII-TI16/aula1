@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Título da Página</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="style/page.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h2>Contador de clicks</h2>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3 col-sm-12">
+          <button id="btnIncremento" type="button">Me clique!</button>
+        </div>
+        <div class="col-lg-3 col-sm-12">
+            <span id="counter" class="current-counter" >0</button>
+          </div>
+      </div>
+    </div>
+    <script src="scripts/helloAlert.js"></script>
+    <script>
+      var totalClicks = 0;
+
+      document
+        .getElementById("btnIncremento")
+        .addEventListener("click", function() {
+          totalClicks++;
+          document.getElementById("counter").innerHTML = totalClicks;
+          console.log("total de clicks alterado: ", totalClicks);
+        });
+    </script>
+    <style>
+        .current-counter {
+            font-weight: bold;
+        }
+    </style>
+  </body>
+</html>
